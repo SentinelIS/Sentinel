@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create New User</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="createUser()">
+      <mat-form-field>
+        <mat-label>User Abbreviation</mat-label>
+        <input matInput formControlName="userAbbr" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Firstname</mat-label>
+        <input matInput formControlName="firstname" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Surname</mat-label>
+        <input matInput formControlName="surname" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Role</mat-label>
+        <input matInput formControlName="role" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Repeat Password</mat-label>
+        <input matInput formControlName="passwordRepeat" type="password" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Create User</button>
+    </form>
+  </mat-card-content>
+</mat-card>

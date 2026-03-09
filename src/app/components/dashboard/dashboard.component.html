@@ -1,0 +1,14 @@
+<app-navigation></app-navigation>
+<div class="container">
+  <mat-card *ngIf="user">
+    <mat-card-header>
+      <mat-card-title>Welcome, {{ user.firstname }} {{ user.surname }}</mat-card-title>
+      <mat-card-subtitle>{{ user.role }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>This is your dashboard. More features will be added soon.</p>
+    </mat-card-content>
+  </mat-card>
+
+  <app-create-user *ngIf="user && user.role === 'admin'"></app-create-user>
+</div>

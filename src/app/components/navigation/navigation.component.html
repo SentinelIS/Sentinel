@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  <span>Sentinel</span>
+  <span class="spacer"></span>
+  <button mat-icon-button *ngIf="isAuthenticated()" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
